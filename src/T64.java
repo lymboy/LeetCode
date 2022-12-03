@@ -3,7 +3,6 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import jdk.jshell.Diag;
 
 public class T64 {
 

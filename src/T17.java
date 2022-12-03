@@ -1,4 +1,7 @@
+import org.junit.Test;
+
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class T17 {
@@ -32,6 +35,32 @@ public class T17 {
         T17 a = new T17();
         a.letterCombinations("23");
         a.ans.forEach(System.out::println);
+    }
+
+
+    private String[] digitMap = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+    List<String> res = new LinkedList<>();
+    public List<String> letterCombinations2(String digits) {
+
+        f(digits, 0, "");
+
+        return res;
+    }
+
+    private void f(String digits, int index, String s) {
+        if (index == digits.length()) {
+            res.add(s);
+            return;
+        }
+        String t = digitMap[digits.charAt(index)-'0'];
+        for (int i = 0; i < t.length(); i++) {
+            f(digits, index+1, s+t.charAt(i));
+        }
+    }
+
+    @Test
+    public void test59() {
+        letterCombinations2("32").stream().forEach(System.out::println);
     }
 
 }
