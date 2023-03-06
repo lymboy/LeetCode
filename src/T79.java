@@ -5,7 +5,7 @@ import org.junit.Test;
  * @version 1.0
  * @since 2022-09-11
  */
-public class T079 {
+public class T79 {
 
     // 上下左右四个方向遍历
     int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
