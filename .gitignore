@@ -1,3 +1,6 @@
 /.vscode/
 /out/
 /.idea/
+/LeetCode.iml
+/src/.cache
+/.cache
