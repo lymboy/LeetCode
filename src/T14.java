@@ -8,7 +8,6 @@ public class T14 {
         if (strs.length == 0) {
             return "";
         }
-        int index = 0;
         String s = String.valueOf(strs[0]);
         for (String str : strs) {
             while (!str.startsWith(s)) {

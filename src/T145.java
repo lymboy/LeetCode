@@ -8,18 +8,15 @@ import java.util.List;
  */
 public class T145 {
 
+    List<Integer> result = new LinkedList<>();
 
-    class Solution {
-
-        List<Integer> result = new LinkedList<>();
-
-        public List<Integer> postorderTraversal(TreeNode root) {
-            if (root != null) {
-                postorderTraversal(root.left);
-                postorderTraversal(root.right);
-                result.add(root.val);
-            }
-            return result;
+    public List<Integer> postorderTraversal(TreeNode root) {
+        if (root != null) {
+            postorderTraversal(root.left);
+            postorderTraversal(root.right);
+            result.add(root.val);
         }
+        return result;
     }
+
 }

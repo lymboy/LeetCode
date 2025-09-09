@@ -1,7 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,12 +27,7 @@ public class T15 {
         while (s < e) {
             int p = list.indexOf(-(list.get(s) + list.get(e)));
             if (p>=0 && p<nums.length && p!=s && p!= e) {
-                List<Integer> ans = new ArrayList<>();
-                ans.add(nums[s]);
-                ans.add(nums[p]);
-                ans.add(nums[e]);
-
-                result.add(ans);
+                result.add(Arrays.asList(nums[s], nums[p], nums[e]));
             }
             if (nums[s] + nums[e]<=0) {
                 s++;

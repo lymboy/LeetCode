@@ -7,19 +7,14 @@ import java.util.List;
  * @since 2023-03-06
  */
 public class T94 {
-
-    class Solution {
-
-        List<Integer> result = new LinkedList<>();
-
-        public List<Integer> inorderTraversal(TreeNode root) {
-            if (root != null) {
-                inorderTraversal(root.left);
-                result.add(root.val);
-                inorderTraversal(root.right);
-            }
-            return result;
+    List<Integer> result = new LinkedList<>();
+    
+    public List<Integer> inorderTraversal(TreeNode root) {
+        if (root != null) {
+            inorderTraversal(root.left);
+            result.add(root.val);
+            inorderTraversal(root.right);
         }
+        return result;
     }
 }
-
